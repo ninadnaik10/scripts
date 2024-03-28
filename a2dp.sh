@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Start bluetoothctl
+bluetoothctl << EOF
+menu gatt
+register-service 0000110d-0000-1000-8000-00805f9b34fb
+yes
+quit
+EOF
+
+# Restart the Bluetooth service
+sudo systemctl restart bluetooth
+
