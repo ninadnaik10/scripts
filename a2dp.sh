@@ -10,4 +10,10 @@ EOF
 
 # Restart the Bluetooth service
 sudo systemctl restart bluetooth
+sleep 5
+bluetoothctl << EOF
+connect E4:41:22:FC:FB:DC
+quit
+EOF
 
+# Enter Device Address above
