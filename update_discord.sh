@@ -1,6 +1,9 @@
 #!/bin/bash
 
-wget https://discordapp.com/api/download?platform=linux -O ~/Downloads/discord.deb
 cd ~/Downloads
-sudo dpkg -i discord.deb
 
+wget 'https://discord.com/api/download/stable?platform=linux&format=tar.gz' -O discord.tar.gz
+
+tar -xvzf discord.tar.gz
+
+./Discord/Discord
